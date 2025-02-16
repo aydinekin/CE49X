@@ -8,3 +8,5 @@
 **/.virtual_documents/
 # You might also want to ignore other temporary files if needed
 
+/book1_python_handbook/
+/book2_datascience_handbook/
