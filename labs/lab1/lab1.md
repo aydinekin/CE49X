@@ -1,5 +1,5 @@
 
-# Lab 1: Traffic Data Analysis
+# Lab 1: Traffic Data Analysis (due Thursday, Feb 20th, 5pm)
 
 **Objective:**  
 In this lab, you will practice the basics of Python programming by loading a small traffic dataset, computing basic descriptive statistics, and then committing and pushing your work to GitHub.
@@ -154,7 +154,7 @@ Follow these steps to commit your lab work and push it to GitHub:
 
 - Ensure that your script runs without errors.
 - Verify that your code is pushed to your GitHub repository.
-
+- Email the URL of your GitHub repository to eyuphan.koc@bogazici.edu.tr.
 ---
 
 ## 8. Additional Resources
