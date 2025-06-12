@@ -1,0 +1,61 @@
+product_id,product_name,life_cycle_stage,material_type,quantity_kg,energy_consumption_kwh,transport_distance_km,transport_mode,waste_generated_kg,recycling_rate,landfill_rate,incineration_rate,carbon_footprint_kg_co2e,water_usage_liters
+P001,Reinforced Concrete,Manufacturing,Concrete,2500,120,50,Truck,125,0.1,0.8,0.1,350,150
+P001,Reinforced Concrete,Transportation,Concrete,2500,20,100,Truck,0,0,0,0,75,0
+P001,Reinforced Concrete,End-of-Life,Concrete,2500,50,30,Truck,2500,0.1,0.8,0.1,200,50
+P002,Structural Steel Beam,Manufacturing,Steel,500,300,200,Truck,25,0.9,0.05,0.05,450,200
+P002,Structural Steel Beam,Transportation,Steel,500,40,150,Truck,0,0,0,0,100,0
+P002,Structural Steel Beam,End-of-Life,Steel,500,30,40,Truck,500,0.9,0.05,0.05,150,30
+P003,Engineered Wood Beam,Manufacturing,Wood,100,80,120,Truck,5,0.8,0.15,0.05,120,80
+P003,Engineered Wood Beam,Transportation,Wood,100,15,100,Truck,0,0,0,0,30,0
+P003,Engineered Wood Beam,End-of-Life,Wood,100,10,30,Truck,100,0.8,0.15,0.05,40,20
+P004,Clay Brick,Manufacturing,Clay,2.5,15,80,Truck,0.25,0.2,0.7,0.1,3.5,10
+P004,Clay Brick,Transportation,Clay,2.5,5,60,Truck,0,0,0,0,1.5,0
+P004,Clay Brick,End-of-Life,Clay,2.5,2,20,Truck,2.5,0.2,0.7,0.1,1.0,2
+P005,Glass Panel,Manufacturing,Glass,50,200,150,Truck,2.5,0.9,0.05,0.05,300,100
+P005,Glass Panel,Transportation,Glass,50,30,120,Truck,0,0,0,0,60,0
+P005,Glass Panel,End-of-Life,Glass,50,20,40,Truck,50,0.9,0.05,0.05,80,15
+P006,Copper Wire,Manufacturing,Copper,10,150,200,Truck,0.5,0.95,0.03,0.02,200,50
+P006,Copper Wire,Transportation,Copper,10,20,150,Truck,0,0,0,0,40,0
+P006,Copper Wire,End-of-Life,Copper,10,15,30,Truck,10,0.95,0.03,0.02,60,10
+P007,Aluminum Cladding,Manufacturing,Aluminum,20,180,180,Truck,1,0.85,0.1,0.05,250,60
+P007,Aluminum Cladding,Transportation,Aluminum,20,25,140,Truck,0,0,0,0,50,0
+P007,Aluminum Cladding,End-of-Life,Aluminum,20,20,35,Truck,20,0.85,0.1,0.05,70,12
+P008,Insulation Board,Manufacturing,Mineral Wool,15,100,100,Truck,0.75,0.4,0.5,0.1,150,40
+P008,Insulation Board,Transportation,Mineral Wool,15,15,80,Truck,0,0,0,0,30,0
+P008,Insulation Board,End-of-Life,Mineral Wool,15,10,25,Truck,15,0.4,0.5,0.1,45,8
+P009,Plastic Pipe,Manufacturing,Polyvinyl Chloride,5,80,120,Truck,0.25,0.3,0.6,0.1,120,30
+P009,Plastic Pipe,Transportation,Polyvinyl Chloride,5,10,90,Truck,0,0,0,0,20,0
+P009,Plastic Pipe,End-of-Life,Polyvinyl Chloride,5,5,20,Truck,5,0.3,0.6,0.1,35,5
+P010,Cement Block,Manufacturing,Cement,20,60,70,Truck,1,0.15,0.75,0.1,85,25
+P010,Cement Block,Transportation,Cement,20,10,50,Truck,0,0,0,0,15,0
+P010,Cement Block,End-of-Life,Cement,20,8,15,Truck,20,0.15,0.75,0.1,25,5
+P011,Steel Rebar,Manufacturing,Steel,100,250,150,Truck,5,0.9,0.05,0.05,180,150
+P011,Steel Rebar,Transportation,Steel,100,30,120,Truck,0,0,0,0,50,0
+P011,Steel Rebar,End-of-Life,Steel,100,20,35,Truck,100,0.9,0.05,0.05,10,10
+P012,Wood Flooring,Manufacturing,Wood,50,60,100,Truck,2.5,0.8,0.15,0.05,40,40
+P012,Wood Flooring,Transportation,Wood,50,10,80,Truck,0,0,0,0,15,0
+P012,Wood Flooring,End-of-Life,Wood,50,8,25,Truck,50,0.8,0.15,0.05,20,10
+P013,Glass Window,Manufacturing,Glass,40,160,130,Truck,2,0.9,0.05,0.05,240,80
+P013,Glass Window,Transportation,Glass,40,25,110,Truck,0,0,0,0,48,0
+P013,Glass Window,End-of-Life,Glass,40,15,35,Truck,40,0.9,0.05,0.05,64,12
+P014,Copper Pipe,Manufacturing,Copper,8,120,180,Truck,0.4,0.95,0.03,0.02,160,40
+P014,Copper Pipe,Transportation,Copper,8,15,140,Truck,0,0,0,0,32,0
+P014,Copper Pipe,End-of-Life,Copper,8,12,25,Truck,8,0.95,0.03,0.02,48,8
+P015,Mineral Wool Insulation,Manufacturing,Mineral Wool,12,80,90,Truck,0.6,0.4,0.5,0.1,80,32
+P015,Mineral Wool Insulation,Transportation,Mineral Wool,12,12,70,Truck,0,0,0,0,24,0
+P015,Mineral Wool Insulation,End-of-Life,Mineral Wool,12,8,20,Truck,12,0.4,0.5,0.1,36,6
+P016,Concrete Block,Manufacturing,Concrete,15,45,60,Truck,0.75,0.1,0.8,0.1,2.1,9
+P016,Concrete Block,Transportation,Concrete,15,8,45,Truck,0,0,0,0,0.45,0
+P016,Concrete Block,End-of-Life,Concrete,15,6,12,Truck,15,0.1,0.8,0.1,1.2,3
+P017,Clay Roof Tile,Manufacturing,Clay,2,12,70,Truck,0.2,0.2,0.7,0.1,2.8,8
+P017,Clay Roof Tile,Transportation,Clay,2,4,50,Truck,0,0,0,0,1.2,0
+P017,Clay Roof Tile,End-of-Life,Clay,2,1.5,18,Truck,2,0.2,0.7,0.1,0.8,1.6
+P018,Aluminum Window Frame,Manufacturing,Aluminum,15,135,160,Truck,0.75,0.85,0.1,0.05,37.5,45
+P018,Aluminum Window Frame,Transportation,Aluminum,15,20,130,Truck,0,0,0,0,9,0
+P018,Aluminum Window Frame,End-of-Life,Aluminum,15,15,30,Truck,15,0.85,0.1,0.05,1.5,9
+P019,Steel Roof Panel,Manufacturing,Steel,80,200,170,Truck,4,0.9,0.05,0.05,144,120
+P019,Steel Roof Panel,Transportation,Steel,80,25,140,Truck,0,0,0,0,40,0
+P019,Steel Roof Panel,End-of-Life,Steel,80,20,32,Truck,80,0.9,0.05,0.05,8,8
+P020,Wood Stud,Manufacturing,Wood,30,48,90,Truck,1.5,0.8,0.15,0.05,24,24
+P020,Wood Stud,Transportation,Wood,30,8,70,Truck,0,0,0,0,9,0
+P020,Wood Stud,End-of-Life,Wood,30,6,22,Truck,30,0.8,0.15,0.05,12,6

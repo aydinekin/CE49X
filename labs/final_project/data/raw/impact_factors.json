@@ -1,0 +1,288 @@
+{
+    "steel": {
+        "manufacturing": {
+            "carbon_impact": 1.8,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 20,
+            "energy_unit": "MJ",
+            "water_impact": 150,
+            "water_unit": "L"
+        },
+        "transportation": {
+            "carbon_impact": 0.5,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 5,
+            "energy_unit": "MJ",
+            "water_impact": 30,
+            "water_unit": "L"
+        },
+        "disposal": {
+            "carbon_impact": 0.1,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 1,
+            "energy_unit": "MJ",
+            "water_impact": 10,
+            "water_unit": "L"
+        }
+    },
+    "aluminum": {
+        "manufacturing": {
+            "carbon_impact": 2.5,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 25,
+            "energy_unit": "MJ",
+            "water_impact": 200,
+            "water_unit": "L"
+        },
+        "transportation": {
+            "carbon_impact": 0.6,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 6,
+            "energy_unit": "MJ",
+            "water_impact": 40,
+            "water_unit": "L"
+        },
+        "disposal": {
+            "carbon_impact": 0.1,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 1,
+            "energy_unit": "MJ",
+            "water_impact": 8,
+            "water_unit": "L"
+        }
+    },
+    "plastic": {
+        "manufacturing": {
+            "carbon_impact": 1.2,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 15,
+            "energy_unit": "MJ",
+            "water_impact": 100,
+            "water_unit": "L"
+        },
+        "transportation": {
+            "carbon_impact": 0.3,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 3,
+            "energy_unit": "MJ",
+            "water_impact": 20,
+            "water_unit": "L"
+        },
+        "disposal": {
+            "carbon_impact": 0.2,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 2,
+            "energy_unit": "MJ",
+            "water_impact": 12,
+            "water_unit": "L"
+        }
+    },
+    "paper": {
+        "manufacturing": {
+            "carbon_impact": 0.8,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 10,
+            "energy_unit": "MJ",
+            "water_impact": 80,
+            "water_unit": "L"
+        },
+        "transportation": {
+            "carbon_impact": 0.2,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 2,
+            "energy_unit": "MJ",
+            "water_impact": 15,
+            "water_unit": "L"
+        },
+        "disposal": {
+            "carbon_impact": 0.1,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 1,
+            "energy_unit": "MJ",
+            "water_impact": 5,
+            "water_unit": "L"
+        }
+    },
+    "concrete": {
+        "manufacturing": {
+            "carbon_impact": 0.14,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 1.5,
+            "energy_unit": "MJ",
+            "water_impact": 60,
+            "water_unit": "L"
+        },
+        "transportation": {
+            "carbon_impact": 0.03,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 0.3,
+            "energy_unit": "MJ",
+            "water_impact": 0,
+            "water_unit": "L"
+        },
+        "disposal": {
+            "carbon_impact": 0.08,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 0.8,
+            "energy_unit": "MJ",
+            "water_impact": 20,
+            "water_unit": "L"
+        }
+    },
+    "wood": {
+        "manufacturing": {
+            "carbon_impact": 0.8,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 8,
+            "energy_unit": "MJ",
+            "water_impact": 80,
+            "water_unit": "L"
+        },
+        "transportation": {
+            "carbon_impact": 0.3,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 3,
+            "energy_unit": "MJ",
+            "water_impact": 0,
+            "water_unit": "L"
+        },
+        "disposal": {
+            "carbon_impact": 0.4,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 4,
+            "energy_unit": "MJ",
+            "water_impact": 20,
+            "water_unit": "L"
+        }
+    },
+    "clay": {
+        "manufacturing": {
+            "carbon_impact": 1.4,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 14,
+            "energy_unit": "MJ",
+            "water_impact": 40,
+            "water_unit": "L"
+        },
+        "transportation": {
+            "carbon_impact": 0.6,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 6,
+            "energy_unit": "MJ",
+            "water_impact": 0,
+            "water_unit": "L"
+        },
+        "disposal": {
+            "carbon_impact": 0.4,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 4,
+            "energy_unit": "MJ",
+            "water_impact": 8,
+            "water_unit": "L"
+        }
+    },
+    "glass": {
+        "manufacturing": {
+            "carbon_impact": 6.0,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 60,
+            "energy_unit": "MJ",
+            "water_impact": 200,
+            "water_unit": "L"
+        },
+        "transportation": {
+            "carbon_impact": 1.2,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 12,
+            "energy_unit": "MJ",
+            "water_impact": 0,
+            "water_unit": "L"
+        },
+        "disposal": {
+            "carbon_impact": 1.6,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 16,
+            "energy_unit": "MJ",
+            "water_impact": 30,
+            "water_unit": "L"
+        }
+    },
+    "copper": {
+        "manufacturing": {
+            "carbon_impact": 20.0,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 200,
+            "energy_unit": "MJ",
+            "water_impact": 500,
+            "water_unit": "L"
+        },
+        "transportation": {
+            "carbon_impact": 4.0,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 40,
+            "energy_unit": "MJ",
+            "water_impact": 0,
+            "water_unit": "L"
+        },
+        "disposal": {
+            "carbon_impact": 6.0,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 60,
+            "energy_unit": "MJ",
+            "water_impact": 100,
+            "water_unit": "L"
+        }
+    },
+    "mineral_wool": {
+        "manufacturing": {
+            "carbon_impact": 6.7,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 67,
+            "energy_unit": "MJ",
+            "water_impact": 267,
+            "water_unit": "L"
+        },
+        "transportation": {
+            "carbon_impact": 2.0,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 20,
+            "energy_unit": "MJ",
+            "water_impact": 0,
+            "water_unit": "L"
+        },
+        "disposal": {
+            "carbon_impact": 3.0,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 30,
+            "energy_unit": "MJ",
+            "water_impact": 53,
+            "water_unit": "L"
+        }
+    },
+    "cement": {
+        "manufacturing": {
+            "carbon_impact": 0.9,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 9,
+            "energy_unit": "MJ",
+            "water_impact": 125,
+            "water_unit": "L"
+        },
+        "transportation": {
+            "carbon_impact": 0.75,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 7.5,
+            "energy_unit": "MJ",
+            "water_impact": 0,
+            "water_unit": "L"
+        },
+        "disposal": {
+            "carbon_impact": 1.25,
+            "carbon_unit": "kg CO2e",
+            "energy_impact": 12.5,
+            "energy_unit": "MJ",
+            "water_impact": 25,
+            "water_unit": "L"
+        }
+    }
+} 
