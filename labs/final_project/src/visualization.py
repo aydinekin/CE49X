@@ -39,8 +39,12 @@ class LCAVisualizer:
         
         impact_data = data.groupby(group_by)[impact_type].sum()
         impact_data = impact_data.sort_values(ascending=False)
+
+        # Removed labels from on the graph because they were overlapping
         ax.pie(impact_data, autopct='%1.1f%%',
                colors=self.colors[:len(impact_data)])
+
+        # Calculate percentages for legends
         total = impact_data.sum()
         percentages = (impact_data / total) * 100
 
@@ -170,7 +174,7 @@ class LCAVisualizer:
 
         fig, ax = plt.subplots(figsize=(10, 6))
 
-        # Set index to desired x-axis labels
+        # Changed x-axis labels
         eol_data = product_data[['life_cycle_stage', 'recycling_rate', 'landfill_rate', 'incineration_rate']]
         eol_data = eol_data.set_index('life_cycle_stage')
 
