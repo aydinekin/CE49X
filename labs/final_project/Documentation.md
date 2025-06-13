@@ -99,6 +99,8 @@ Impact factors are stored in JSON format with the following structure:
 
 ### Main Script - final_project.py
 final_project.py is a tool that analyzes the environmental impacts with LCA from input to output  in a single script
+Code is explained in detail with inline comments.
+
 ### Features
 - Loads and validates input data
 - Performs total and normalized impact calculations
@@ -114,27 +116,27 @@ visualizer.all_products_comparrison_by_all_stages(impacts, "carbon_impact", "kg 
 ```
  - Changed data validation function where Transportation stage was also accounted in the original but the data is not fitting for that.
 ```python
-# Validate rates sum to 1
-# Only validate rows where there is waste
-waste_rows = data[data['waste_generated_kg'] > 0]
-rate_columns = ['recycling_rate', 'landfill_rate', 'incineration_rate']
-if not (waste_rows[rate_columns].sum(axis=1) - 1).abs().lt(0.001).all():
-    return False
+  # Validate rates sum to 1
+  # Only validate rows where there is waste
+  waste_rows = data[data['waste_generated_kg'] > 0]
+  rate_columns = ['recycling_rate', 'landfill_rate', 'incineration_rate']
+  if not (waste_rows[rate_columns].sum(axis=1) - 1).abs().lt(0.001).all():
+      return False
 ```
  - Made minor changes on existing graph functions, suchs as increasing readability by creating legends and sorting them.
 
 ```python
-    # Removed labels from on the graph because they were overlapping
-    ax.pie(impact_data, autopct='%1.1f%%',
-           colors=self.colors[:len(impact_data)])
-    
-    # Calculate percentages for legends
-    total = impact_data.sum()
-    percentages = (impact_data / total) * 100
-    
-    # Create custom legend labels with percentages
-    legend_labels = [f"{label}: {pct:.1f}%" for label, pct in zip(impact_data.index, percentages)]
-    ax.legend(legend_labels, loc='center left', bbox_to_anchor=(1, 0.5))
+  # Removed labels from on the graph because they were overlapping
+  ax.pie(impact_data, autopct='%1.1f%%',
+         colors=self.colors[:len(impact_data)])
+  
+  # Calculate percentages for legends
+  total = impact_data.sum()
+  percentages = (impact_data / total) * 100
+  
+  # Create custom legend labels with percentages
+  legend_labels = [f"{label}: {pct:.1f}%" for label, pct in zip(impact_data.index, percentages)]
+  ax.legend(legend_labels, loc='center left', bbox_to_anchor=(1, 0.5))
 ```
 ```python
   # Changed x-axis labels
@@ -170,36 +172,4 @@ if not (waste_rows[rate_columns].sum(axis=1) - 1).abs().lt(0.001).all():
 ```
 ### Results 
 The results of this analysis are saved on the result file path. It consists of the csv files for total_impacts, normalized_impacts and impacts_by_stage. It also consists of graphs in png form for product_comparison, impact_correlation, carbon_impact_breakdown etc. 
-... are the extra features added explained in the above section. 
-
-
-## Submission
-- **Deadline**: June 13, 2025, 11:59 PM
-- Submit your project by pushing your code to your personal GitHub repository
-- The repository should include:
-  1. Complete code implementation
-  2. Documentation
-  3. Test files
-  4. Sample data and results
-- **Important**: After pushing your code to GitHub, send an email to eyuphan.koc@gmail.com with:
-  - Your name
-  - Your GitHub repository URL
-
-## Grading Rubric
-
-| Category | Excellent (90-100) | Good (80-89) | Fair (70-79) | Needs Improvement (<70) |
-|----------|-------------------|--------------|--------------|------------------------|
-| Code Quality | Well-structured, documented, efficient | Good structure, adequate documentation | Basic structure, minimal documentation | Poor structure, lacking documentation |
-| Functionality | All features implemented, robust | Most features implemented | Basic features implemented | Missing key features |
-| Documentation | Comprehensive, clear, professional | Good coverage, clear | Basic coverage | Inadequate coverage |
-
-## Getting Started
-1. Clone the starter repository
-2. Set up your development environment
-3. Review the requirements and documentation
-4. Start with basic functionality
-5. Incrementally add features
-6. Test thoroughly
-7. Document as you go
-
-Good luck with your project! Remember to start early and commit your changes regularly. 
+Extra features added explained in the above section. 
