@@ -1,5 +1,7 @@
 # Life Cycle Analysis (LCA) Tool
 
+Note: Contributions of the student is explained in the documentation.md file.
+
 ## Project Overview
 This LCA tool helps analyze and visualize the environmental impacts of products or processes throughout their entire life cycle. The tool integrates Python programming fundamentals, data science concepts, and environmental science principles to provide comprehensive environmental impact assessment.
 
