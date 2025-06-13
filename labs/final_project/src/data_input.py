@@ -73,8 +73,10 @@ class DataInput:
                 return False
                 
         # Validate rates sum to 1
+        # Only validate rows where there is waste
+        waste_rows = data[data['waste_generated_kg'] > 0]
         rate_columns = ['recycling_rate', 'landfill_rate', 'incineration_rate']
-        if not (data[rate_columns].sum(axis=1) - 1).abs().lt(0.001).all():
+        if not (waste_rows[rate_columns].sum(axis=1) - 1).abs().lt(0.001).all():
             return False
             
         return True

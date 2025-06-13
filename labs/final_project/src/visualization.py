@@ -11,7 +11,7 @@ import numpy as np
 
 class LCAVisualizer:
     def __init__(self):
-        plt.style.use('seaborn')
+        plt.style.use('seaborn-v0_8')
         self.colors = sns.color_palette("husl", 8)
         self.impact_labels = {
             'carbon_impact': 'Carbon Impact (kg CO2e)',
@@ -38,14 +38,48 @@ class LCAVisualizer:
         fig, ax = plt.subplots(figsize=(10, 6))
         
         impact_data = data.groupby(group_by)[impact_type].sum()
-        ax.pie(impact_data, labels=impact_data.index, autopct='%1.1f%%',
+        impact_data = impact_data.sort_values(ascending=False)
+        ax.pie(impact_data, autopct='%1.1f%%',
                colors=self.colors[:len(impact_data)])
+        total = impact_data.sum()
+        percentages = (impact_data / total) * 100
+
+        # Create custom legend labels with percentages
+        legend_labels = [f"{label}: {pct:.1f}%" for label, pct in zip(impact_data.index, percentages)]
+        ax.legend(legend_labels, loc='center left', bbox_to_anchor=(1, 0.5))
         
         if title:
             ax.set_title(title)
         else:
             ax.set_title(f'{self.impact_labels[impact_type]} by {group_by.replace("_", " ").title()}')
             
+        return fig
+
+    def all_products_comparrison_by_all_stages(self, data: pd.DataFrame, impact: str, unit: str) -> plt.Figure:
+        carbon_df = data[['product_id', 'life_cycle_stage', impact]].copy()
+
+        # Pivot to get life cycle stages as separate columns
+        pivot_df = carbon_df.pivot(index='product_id', columns='life_cycle_stage', values=impact).fillna(0)
+
+        # Sort columns to ensure consistent stage order
+        stage_order = ['manufacturing', 'transportation', 'end-of-life']  # adjust if your stage name differs
+        pivot_df = pivot_df[stage_order]
+
+        # Create figure and axis explicitly
+        fig, ax = plt.subplots(figsize=(12, 6))
+
+        # Plot on the created axis
+        pivot_df.plot(kind='bar', width=0.75, ax=ax)
+
+        ax.set_title(f"{impact.replace('_', ' ').title()} by Life Cycle Stage for Each Product")
+        ax.set_xlabel("Product ID")
+        ax.set_ylabel(f"{impact.replace('_', ' ').title()} ({unit})")
+        ax.set_xticklabels(ax.get_xticklabels(), rotation=0)
+        ax.legend(title="Life Cycle Stage")
+        ax.grid(axis='y', linestyle='--', alpha=0.7)
+
+        plt.tight_layout()
+
         return fig
     
     def plot_life_cycle_impacts(self, data: pd.DataFrame, 
@@ -130,35 +164,26 @@ class LCAVisualizer:
         plt.legend(loc='upper right', bbox_to_anchor=(0.3, 0.3))
         
         return fig
-    
-    def plot_end_of_life_breakdown(self, data: pd.DataFrame, 
-                                 product_id: str) -> plt.Figure:
-        """
-        Create a stacked bar chart showing end-of-life management breakdown.
-        
-        Args:
-            data: DataFrame with impact data
-            product_id: Product ID to analyze
-            
-        Returns:
-            matplotlib Figure object
-        """
+
+    def plot_end_of_life_breakdown(self, data: pd.DataFrame, product_id: str) -> plt.Figure:
         product_data = data[data['product_id'] == product_id]
-        
+
         fig, ax = plt.subplots(figsize=(10, 6))
-        
-        eol_data = product_data[['recycling_rate', 'landfill_rate', 'incineration_rate']]
-        eol_data.plot(kind='bar', stacked=True, ax=ax, 
-                     color=['green', 'red', 'orange'])
-        
+
+        # Set index to desired x-axis labels
+        eol_data = product_data[['life_cycle_stage', 'recycling_rate', 'landfill_rate', 'incineration_rate']]
+        eol_data = eol_data.set_index('life_cycle_stage')
+
+        eol_data.plot(kind='bar', stacked=True, ax=ax, color=['green', 'red', 'orange'])
+
         ax.set_title(f'End-of-Life Management for Product {product_id}')
         ax.set_xlabel('Life Cycle Stage')
         ax.set_ylabel('Rate')
         ax.set_ylim(0, 1)
-        plt.xticks(rotation=45)
-        
+        plt.xticks(rotation=25)
+
         return fig
-    
+
     def plot_impact_correlation(self, data: pd.DataFrame) -> plt.Figure:
         """
         Create a correlation heatmap of different impact categories.

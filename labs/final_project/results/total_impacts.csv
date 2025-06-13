@@ -1,0 +1,21 @@
+product_id,product_name,carbon_impact,energy_impact,water_impact,waste_generated_kg
+P001,Reinforced Concrete,1050.0,4690.0,150200.0,2625.0
+P002,Structural Steel Beam,1850.0,12870.0,90230.0,525.0
+P003,Engineered Wood Beam,300.0,1205.0,8100.0,105.0
+P004,Clay Brick,11.0,72.0,112.0,2.75
+P005,Glass Panel,800.0,3850.0,10115.0,52.5
+P006,Copper Wire,540.0,2585.0,5060.0,10.5
+P007,Aluminum Cladding,432.0,845.0,4872.0,21.0
+P008,Insulation Board,225.0,125.0,48.0,15.75
+P009,Plastic Pipe,175.0,95.0,35.0,5.25
+P010,Cement Block,158.0,408.0,2530.0,21.0
+P011,Steel Rebar,470.0,2800.0,18160.0,105.0
+P012,Wood Flooring,130.0,628.0,4050.0,52.5
+P013,Glass Window,640.0,3080.0,8092.0,42.0
+P014,Copper Pipe,432.0,2067.0,4048.0,8.4
+P015,Mineral Wool Insulation,140.0,100.0,38.0,12.6
+P016,Concrete Block,6.3,86.0,912.0,15.75
+P017,Clay Roof Tile,8.799999999999999,57.5,89.6,2.2
+P018,Aluminum Window Frame,94.5,635.0,3654.0,15.75
+P019,Steel Roof Panel,376.0,2245.0,14528.0,84.0
+P020,Wood Stud,78.0,392.0,2430.0,31.5
